@@ -1,8 +1,6 @@
 # DbmlParser
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dbml_parser`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+DBML Parser is a gem for parsing [Database Markup Language (DBML)](https://www.dbml.org/).
+It ingests a .dbml file in the given directory (default root dir), and returns a schema.rb based on that file. It can also suggest tables that needed to be created that are not currently in your schema.rb. It will generate those migrations if needed.
 
 ## Installation
 
@@ -22,7 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```Ruby
+# To generate a schema.rb
+bundle exec rails generate dbml:schema
+
+# To generate missing migrations
+bundle exec rails generate dbml:migrations
+
+```
 
 ## Development
 

@@ -1,7 +1,15 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-# Specify your gem's dependencies in dbml_parser.gemspec
+source 'https://rubygems.org'
+
 gemspec
 
-gem "rake", "~> 12.0"
-gem "rspec", "~> 3.0"
+group :development, :test do
+  gem 'pry-byebug'
+  gem 'rake'
+  gem 'sorbet', '~> 0.5'
+end
+
+group :test do
+  gem 'rspec', '~> 3.0'
+end
